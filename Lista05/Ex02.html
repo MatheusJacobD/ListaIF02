@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classe Social</title>
+</head>
+<body>
+    <input type="text" id="idRenda" placeholder="Digite sua renda familiar">
+
+    <button onclick="analisar()">Analisar Renda</button>
+
+    <p id="idResultado"></p>
+    
+</body>
+<script>
+    function analisar(){
+        let renda = Number(idRenda.value);
+
+        if (renda <= 250){
+            idResultado.innerHTML = "Classe E";
+        } else if (renda > 250 && renda <= 900){
+            idResultado.innerHTML = "Classe D";
+        } else if (renda > 900 && renda <= 2500){
+            idResultado.innerHTML = "Classe C";
+        } else if (renda > 2500 && renda <= 9500){
+            idResultado.innerHTML = "Classe B";
+        } else if (renda > 9500){
+            idResultado.innerHTML = "Classe A";
+        } else {
+            idResultado.innerHTML = "Digite um valor positivo";
+        }
+    }
+</script>
+</html>

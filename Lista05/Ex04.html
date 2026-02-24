@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação</title>
+</head>
+
+<body>
+    <input type="text" id="idPeso" placeholder="Digite o peso da criança">
+
+    <p id="idResultado"></p>
+    <button onclick="analisar()">Analisar peso</button>
+</body>
+<script>
+    function analisar() {
+        let peso = Number(idPeso.value);
+
+        if (peso <= 13.5) {
+            idResultado.innerHTML = "Abaixo do peso";
+        } else if (peso > 13.5 && peso <= 21.2 && peso != 18.3) {
+            idResultado.innerHTML = "Peso na media";
+        } else if (peso > 21.2) {
+            idResultado.innerHTML = "Acima do peso";
+        } else if (peso == 18.3) {
+            idResultado.innerHTML = "Peso perfeito";
+        } else {
+            idResultado.innerHTML = "Digite um peso válido";
+        }
+    }
+</script>
+
+</html>
