@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Times Paulistas</title>
+</head>
+<body>
+    <input type="text" id="idTime" placeholder="Digite seu time">
+
+    <button onclick="analisar()">Fale sobre esse time</button>
+
+    <p id="idResultado"></p>
+</body>
+<script>
+    function analisar(){
+        let time = idTime.value;
+
+        if (time == "Corinthians"){
+            idResultado.innerHTML = `<span style="background:black; color:white;">Salve o Corinthians</span>`;
+        } else if (time == "Palmeiras"){
+            idResultado.innerHTML = `<span style="background:green; color:white;">Salve o alviverde imponente</span>`;
+        } else if (time == "Santos"){
+            idResultado.innerHTML = `<span style="background:white; color:black;">Agora quem dá a bola é o Santos</span>`;
+        } else if (time == "São Paulo"){
+            idResultado.innerHTML = `<span style="background:black; color:red;">Salve o Tricolor paulista</span>`;
+        }
+    }
+</script>
+</html>
